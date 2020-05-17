@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 
 import styled from 'styled-components'
 
-export const AvatarWrapper = styled(Img)`
+export const LogoWrapper = styled(Img)`
   border-radius: 10%;
   height: 40px;
   margin: auto;
@@ -27,7 +27,7 @@ const Avatar = () => {
     `
   )
 
-  return <AvatarWrapper fixed={avatarImage.childImageSharp.fixed} />
+  return <LogoWrapper fixed={avatarImage.childImageSharp.fixed} />
 }
 
 export default Avatar

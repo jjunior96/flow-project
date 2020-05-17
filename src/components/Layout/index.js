@@ -1,28 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Profile from '../Profile'
 import Sidebar from '../Sidebar'
 
 import Globalstyle from '../../styles/global'
 
 const LayoutWrapper = styled.section`
   display: flex;
+  /* background: #273d59; */
 `
 
 const LayoutMain = styled.main`
-  background: #16202c;
+  /* background: #273d59; */
 `
 
 const Layout = () => {
   return (
     <LayoutWrapper>
       <Globalstyle />
-      <aside>
-        <Profile />
-      </aside>
+      <aside />
       <Sidebar />
-      <LayoutMain>Main</LayoutMain>
+      <LayoutMain />
     </LayoutWrapper>
   )
 }
