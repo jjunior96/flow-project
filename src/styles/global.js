@@ -9,8 +9,9 @@ export default createGlobalStyle`
   }
 
   body {
-    background: #F0F2F5 ;
-    -webkit-font-smoothing: antialiased
+    background:#16202c ;
+    -webkit-font-smoothing: antialiased;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   }
 
   body, input, button {
