@@ -2,13 +2,13 @@ import PropTypes from 'prop-types'
 import MenuBar from '../Menu'
 import GlobalStyles from '../../styles/global'
 
-import { LayoutContainer } from './styles'
+import { LayoutContainer, LayoutMain } from './styles'
 
 const Layout = ({ children }) => {
   return (
     <LayoutContainer>
       <GlobalStyles />
-      <main>{children}</main>
+      <LayoutMain>{children}</LayoutMain>
       <MenuBar />
     </LayoutContainer>
   )

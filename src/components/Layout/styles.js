@@ -7,3 +7,4 @@ export const LayoutContainer = styled.div`
     flex-direction: column;
   }
 `
+export const LayoutMain = styled.main``

@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const Menu = styled.aside`
-  background-color: #ccc;
+  background-color: #192734;
   height: 100vh;
-  border-left: 1px solid #b3b2b2;
+  border-left: 1px solid #38444d;
   width: 3.79rem;
   float: right;
   display: flex;
@@ -33,7 +33,7 @@ export const MenuGroup = styled.div`
 `
 
 export const MenuItemLink = styled(Link)`
-  color: #555555;
+  color: #8899a6;
 
   & + a {
     margin-top: 1rem;
