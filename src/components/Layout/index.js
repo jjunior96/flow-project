@@ -1,30 +1,21 @@
-import React from 'react'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import MenuBar from '../Menu'
+import GlobalStyles from '../../styles/global'
 
-import Profile from '../Profile'
-import Sidebar from '../Sidebar'
+import { LayoutContainer } from './styles'
 
-import Globalstyle from '../../styles/global'
-
-const LayoutWrapper = styled.section`
-  display: flex;
-`
-
-const LayoutMain = styled.main`
-  background: #16202c;
-`
-
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <LayoutWrapper>
-      <Globalstyle />
-      <aside>
-        <Profile />
-      </aside>
-      <Sidebar />
-      <LayoutMain>Main</LayoutMain>
-    </LayoutWrapper>
+    <LayoutContainer>
+      <GlobalStyles />
+      <main>{children}</main>
+      <MenuBar />
+    </LayoutContainer>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
