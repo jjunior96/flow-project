@@ -1,26 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Avatar from '../Avatar'
+import Logo from '../Logo'
 
-const Description = styled.h2`
-  color: #fff;
+const Title = styled.h1`
+  color: #d9d9d9;
+  font-size: 22px;
+  padding: 10px 0 5px 0;
+`
+
+const SubTitle = styled.h2`
+  color: #d9d9d9;
+  font-size: 16px;
   padding: 0 0 10px 0;
 `
 
-const Title = styled.h1`
-  color: #fff;
-  font-size: 20px;
-  padding: 0 0 5px 0;
+const Description = styled.p`
+  color: #d9d9d9;
+  font-size: 14px;
+  padding: 0 0 10px 0;
 `
 
 const Profile = () => {
   return (
     <div className="Profile">
-      <Avatar />
+      <Logo />
       <Title>Flow Soft</Title>
-      <Description>Software Development</Description>
-      <p>Description</p>
+      <SubTitle>Software Development</SubTitle>
+      <Description>Description</Description>
     </div>
   )
 }

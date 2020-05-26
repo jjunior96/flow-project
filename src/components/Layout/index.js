@@ -4,13 +4,14 @@ import GlobalStyles from '../../styles/global'
 
 import { LayoutContainer, LayoutMain } from './styles'
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
-    <LayoutContainer>
-      <GlobalStyles />
-      <LayoutMain>{children}</LayoutMain>
-      <MenuBar />
-    </LayoutContainer>
+    <LayoutWrapper>
+      <Globalstyle />
+      <aside />
+      <Sidebar />
+      <LayoutMain />
+    </LayoutWrapper>
   )
 }
 
