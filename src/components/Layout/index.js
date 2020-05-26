@@ -1,18 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import MenuBar from '../Menu'
+import GlobalStyles from '../../styles/global'
 
-import Sidebar from '../Sidebar'
-
-import Globalstyle from '../../styles/global'
-
-const LayoutWrapper = styled.section`
-  display: flex;
-  /* background: #273d59; */
-`
-
-const LayoutMain = styled.main`
-  /* background: #273d59; */
-`
+import { LayoutContainer, LayoutMain } from './styles'
 
 const Layout = () => {
   return (
@@ -23,6 +13,10 @@ const Layout = () => {
       <LayoutMain />
     </LayoutWrapper>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 }
 
 export default Layout
