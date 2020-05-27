@@ -12,8 +12,8 @@ const links = [
     url: '/projects/',
   },
   {
-    label: 'Sobre mim',
-    url: '/about/',
+    label: 'Time',
+    url: '/team/',
   },
 ];
 

@@ -8,7 +8,6 @@ const Navigation = () => {
   return (
     <S.NavigationWrapper>
       <SocialLinks />
-      {/* <ThemeChallenger /> */}
     </S.NavigationWrapper>
   );
 };
