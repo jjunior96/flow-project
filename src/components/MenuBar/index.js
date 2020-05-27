@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import {
   AiOutlineBulb,
@@ -6,8 +6,8 @@ import {
   AiOutlineTeam,
   AiOutlineSearch,
   AiFillHome,
-} from 'react-icons/ai'
-import { Menu, MenuGroup, MenuItemLink } from './styles'
+} from 'react-icons/ai';
+import { Menu, MenuGroup, MenuItemLink } from './styled';
 
 const MenuBar = () => {
   return (
@@ -44,7 +44,7 @@ const MenuBar = () => {
         </MenuItemLink>
       </MenuGroup>
     </Menu>
-  )
-}
+  );
+};
 
-export default MenuBar
+export default MenuBar;
