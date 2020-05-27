@@ -1,27 +1,32 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
 
-import { FaGithub, FaFacebook } from 'react-icons/fa'
+import { Github } from 'styled-icons/boxicons-logos';
+import { LinkedinWithCircle as Linkedin } from 'styled-icons/entypo-social';
 
-const SocialWrapper = styled.nav`
-  margin: 20px auto;
-`
-
-const Icons = styled.div`
-  color: #d9d9d9;
-  width: 100px;
-  /* margin-right: 100px; */
-`
+import * as S from './styled';
 
 const SocialLinks = () => {
   return (
-    <SocialWrapper>
-      <Icons>
-        <FaGithub />
-        <FaFacebook />
-      </Icons>
-    </SocialWrapper>
-  )
-}
+    <S.SocialLinksWrapper>
+      <S.SocialLinksList>
+        <S.SocialLinksItem>
+          <S.SocialLinksLink>
+            <S.Icons>
+              <Github />
+            </S.Icons>
+          </S.SocialLinksLink>
+        </S.SocialLinksItem>
 
-export default SocialLinks
+        <S.SocialLinksItem>
+          <S.SocialLinksLink>
+            <S.Icons>
+              <Linkedin />
+            </S.Icons>
+          </S.SocialLinksLink>
+        </S.SocialLinksItem>
+      </S.SocialLinksList>
+    </S.SocialLinksWrapper>
+  );
+};
+
+export default SocialLinks;

@@ -12,7 +12,7 @@ const links = [
     url: '/projects/',
   },
   {
-    label: 'Time',
+    label: 'Nosso Time',
     url: '/team/',
   },
 ];

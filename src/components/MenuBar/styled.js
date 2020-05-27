@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 export const Menu = styled.aside`
   align-items: center;
-  background-color: #192734;
+  background-color: #222f3e;
   border-left: 1px solid #38444d;
   height: 100vh;
   display: flex;
@@ -21,6 +21,7 @@ export const Menu = styled.aside`
     flex-direction: row;
   }
 `;
+
 export const MenuGroup = styled.div`
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -37,15 +38,17 @@ export const MenuGroup = styled.div`
 `;
 
 export const MenuItemLink = styled(Link)`
-  color: #8899a6;
+  color: #c8d6e5;
 
   & + a {
     margin-top: 1rem;
+
     @media screen and (max-width: 800px) {
       margin: 0;
       margin-right: 1rem;
     }
   }
+
   @media screen and (max-width: 800px) {
     margin: 0;
     margin-right: 1rem;
@@ -56,7 +59,7 @@ export const MenuItemLink = styled(Link)`
     height: 1.5rem;
     transition: color 0.5s ease 0s;
     &:hover {
-      color: #1fa1f2;
+      color: #54a0ff;
     }
   }
 `;
