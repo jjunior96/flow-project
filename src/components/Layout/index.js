@@ -1,22 +1,37 @@
-import PropTypes from 'prop-types'
-import MenuBar from '../Menu'
-import GlobalStyles from '../../styles/global'
+import React from 'react';
+// import { PropTypes } from 'prop-types';
+import { Link } from 'gatsby';
 
-import { LayoutContainer, LayoutMain } from './styles'
+import Navigation from '../Navigation';
+import Sidebar from '../Sidebar';
+import MenuBar from '../MenuBar';
 
-const Layout = () => {
+import GlobalStyled from '../../styles/global';
+import * as S from './styled';
+
+const Layout = ({ children }) => {
   return (
-    <LayoutWrapper>
-      <Globalstyle />
-      <aside />
+    <S.LayoutWrapper>
+      <GlobalStyled />
       <Sidebar />
-      <LayoutMain />
-    </LayoutWrapper>
-  )
-}
+      <MenuBar />
+      <S.LayouyMain>
+        <S.SiteHeader>
+          <S.SiteTitle>
+            <Link to="/">Home</Link>
+          </S.SiteTitle>
+          <Navigation />
+        </S.SiteHeader>
+        {/* Elemento passado no index */}
+        {children}
+        <footer>Footer</footer>
+      </S.LayouyMain>
+    </S.LayoutWrapper>
+  );
+};
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+// Layout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
 
-export default Layout
+export default Layout;
