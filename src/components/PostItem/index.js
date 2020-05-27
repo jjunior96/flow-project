@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   PostItemLink,
   PostItemContainer,
@@ -8,7 +8,7 @@ import {
   PostItemDate,
   PostItemTitle,
   PostItemDesc,
-} from './styles'
+} from './styled';
 
 const PostItem = ({
   link,
@@ -31,7 +31,7 @@ const PostItem = ({
       </PostItemInfo>
     </PostItemContainer>
   </PostItemLink>
-)
+);
 PostItem.propTypes = {
   link: PropTypes.string.isRequired,
   // eslint-disable-next-line react/require-default-props
@@ -41,5 +41,5 @@ PostItem.propTypes = {
   timeRead: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-}
-export default PostItem
+};
+export default PostItem;

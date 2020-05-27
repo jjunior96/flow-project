@@ -1,35 +1,41 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
-import Logo from '../Logo'
+import Avatar from '../Avatar';
 
-const Title = styled.h1`
-  color: #d9d9d9;
-  font-size: 22px;
-  padding: 10px 0 5px 0;
-`
-
-const SubTitle = styled.h2`
-  color: #d9d9d9;
-  font-size: 16px;
-  padding: 0 0 10px 0;
-`
-
-const Description = styled.p`
-  color: #d9d9d9;
-  font-size: 14px;
-  padding: 0 0 10px 0;
-`
+import * as S from './styled';
 
 const Profile = () => {
-  return (
-    <div className="Profile">
-      <Logo />
-      <Title>Flow Soft</Title>
-      <SubTitle>Software Development</SubTitle>
-      <Description>Description</Description>
-    </div>
-  )
-}
+  const {
+    site: {
+      siteMetadata: { title, position, description },
+    },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            position
+            description
+          }
+        }
+      }
+    `
+  );
 
-export default Profile
+  return (
+    <S.ProfileWrapper>
+      <S.ProfileLink to="/">
+        <Avatar />
+        <S.ProfileAuthor>
+          {title}
+          <S.ProfilePosition>{position}</S.ProfilePosition>
+        </S.ProfileAuthor>
+      </S.ProfileLink>
+      <S.ProfileDescription>{description}</S.ProfileDescription>
+    </S.ProfileWrapper>
+  );
+};
+
+export default Profile;
