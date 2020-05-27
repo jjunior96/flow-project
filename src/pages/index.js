@@ -1,13 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
-import PostItem from '../components/PostItem'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import PostItem from '../components/PostItem';
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Main" />
-    <h1>Home</h1>
     <SEO title="Home" />
     <PostItem
       link="/404"
@@ -19,6 +18,6 @@ const IndexPage = () => (
       description="Aprendendo a utilizar Gatsby com um css cagado ! Bora codar"
     />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

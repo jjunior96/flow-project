@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Img from 'gatsby-image';
 
 export const AvatarWrapper = styled(Img)`
-  border-radius: 50%;
+  border-radius: 10%;
   height: 3.75rem;
   width: 3.75rem;
   margin: auto;
