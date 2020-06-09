@@ -10,30 +10,14 @@ export const PostItemLink = styled(Link)`
 `;
 export const PostItemContainer = styled.section`
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 1rem;
-  border-bottom: 1px solid #8899a6;
-`;
-
-export const PostItemIcon = styled.div`
-  border-radius: 50%;
-  width: 3.75rem;
-  height: 3.75rem;
-  margin-right: 1rem;
-
-  background: ${props => (props.background ? props.background : '#1fa1f2')};
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-weight: bold;
-  color: #fff;
+  border: 1px solid #8899a6;
 `;
 
 export const PostItemInfo = styled.div``;
-
-export const PostItemDate = styled.time``;
 
 export const PostItemTitle = styled.h1`
   font-size: 1.6rem;

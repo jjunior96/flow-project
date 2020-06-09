@@ -16,12 +16,6 @@ const Layout = ({ children }) => {
       <Sidebar />
       <MenuBar />
       <S.LayouyMain>
-        <S.SiteHeader>
-          <S.SiteTitle>
-            <Link to="/">Home</Link>
-          </S.SiteTitle>
-          <Navigation />
-        </S.SiteHeader>
         {/* Elemento passado no index */}
         {children}
         <footer>Footer</footer>

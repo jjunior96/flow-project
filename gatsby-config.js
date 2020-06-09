@@ -23,6 +23,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `team`,
+        path: `${__dirname}/team`,
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         // Plugins configs
