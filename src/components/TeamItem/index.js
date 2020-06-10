@@ -1,19 +1,43 @@
-import React from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-  PostItemContainer,
-  PostItemInfo,
-  PostItemTitle,
-  PostItemDesc,
+  TeamItemContainer,
+  TeamName,
+  TeamResponsibility,
+  TeamBio,
+  TeamAvatar,
+  PostItemLink,
 } from './styled';
+import api from '../../services/api';
 
 const PostItem = ({ link, avatar, name, responsibility }) => {
+  const [dev, setDev] = useState({});
+
+  const loadDev = useCallback(async () => {
+    const {
+      data: { avatar_url, bio },
+    } = await api.get(`${avatar}`);
+
+    setDev({
+      avatar: avatar_url,
+      bio,
+    });
+  });
+
+  useEffect(() => {
+    loadDev();
+    console.log(dev);
+  }, []);
   return (
-    <PostItemContainer>
-      <h1>{name}</h1>
-      <span>{responsibility}</span>
-      <small>{avatar}</small>
-    </PostItemContainer>
+    <TeamItemContainer>
+      <PostItemLink>
+        <TeamAvatar src={dev.avatar} alt="Perfil" />
+        <TeamName>{name}</TeamName>
+      </PostItemLink>
+
+      <TeamResponsibility>{responsibility}</TeamResponsibility>
+      <TeamBio>{dev.bio}</TeamBio>
+    </TeamItemContainer>
   );
 };
 
